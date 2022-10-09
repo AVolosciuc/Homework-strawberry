@@ -1,8 +1,10 @@
 .container {
+    position: relative;
     display: flex;
 }
 
-.card {
+.box1 {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,13 +15,30 @@
     background-color: rgb(200, 134, 165);
     border-radius: 30px;
     transition: 1.2s;
-    z-index: 1;
+    z-index: 2;
 
 }
 
+
+
+.container:hover > .box1 {
+    background-color: rgb(208, 97, 97);
+    margin-left: 410px;
+    color: aliceblue;
+}
+
 .box2{
-    z-index: 2;
+    position: absolute;
+    z-index: 1;
     background-color: rgb(52, 50, 50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgb(185, 6, 92);
+    width: 400px;
+    height: 100px;
+    border-radius: 30px;
 }
 
 img {
@@ -44,13 +63,3 @@ h1 {
     padding: 20px;
 
 }
-
-.card:hover {
-    background-color: rgb(208, 97, 97);
-    margin-left: 500px;
-    color: aliceblue;
-    transform:scale(0.8);
-  
-
-}
-
